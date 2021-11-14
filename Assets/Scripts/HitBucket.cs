@@ -18,9 +18,9 @@ public class HitBucket : MonoBehaviour
         {
             ScoreManager.AddScore();
             collision.gameObject.GetComponent<BucketFollow>().Stop();
-            collision.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * 10f + Vector3.forward * -30f);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 20f + Vector3.forward * -50f);
             collision.gameObject.GetComponent<AudioSource>().Play();
-            Destroy(collision.gameObject, 1.0f);
+            Destroy(collision.gameObject);
             
         }
     }
