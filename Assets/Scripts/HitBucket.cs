@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HitBucket : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,9 @@ public class HitBucket : MonoBehaviour
         {
             ScoreManager.AddScore();
             collision.gameObject.GetComponent<BucketFollow>().Stop();
-            collision.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * 5 + Vector3.forward * -6);
+            collision.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * 10f + Vector3.forward * -30f);
+            collision.gameObject.GetComponent<AudioSource>().Play();
+            Destroy(collision.gameObject, 1.0f);
             
         }
     }

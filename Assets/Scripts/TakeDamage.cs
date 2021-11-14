@@ -29,7 +29,7 @@ public class TakeDamage : MonoBehaviour
             {
                 PlayerPrefs.SetInt("HiScore", ScoreManager.score);
             }
-            GameManager.Instance.RestartGame();
+            GameManager.RestartGame();
         }
     }
 
